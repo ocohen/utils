@@ -1,0 +1,5 @@
+find $1 -name "CMakeLists.txt" | while read path; do
+    proj=$(dirname "$path")
+    mkdir -p $proj/build
+    cmake -B$proj/build -H$proj
+done

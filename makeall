@@ -1,0 +1,4 @@
+find $1 -name "CMakeLists.txt" | while read path; do
+    proj=$(dirname "$path")
+    make -C $proj/build
+done

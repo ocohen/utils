@@ -1,0 +1,2 @@
+ctags -R $1
+find $1 \( -name "*.h" -o -name "*.cpp" \) -not -path "*CMake*" -exec vim {} +
